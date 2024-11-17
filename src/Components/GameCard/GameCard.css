@@ -1,0 +1,36 @@
+.gamecard_container{
+    width: 15vw;
+
+    border-radius: 1em;
+    overflow: hidden;
+}
+.image{
+    width: 100%;
+    margin-bottom: -.25em;
+}
+.image img{
+    width: 100%;
+}
+
+.text_content{
+    padding: 1em;
+    background-color: #222;
+}
+
+.title{
+    font-size: 16px;
+    font-weight: 600;
+
+    color: #fff;
+}
+.year{
+    font-size: 12px;
+    font-weight: 400;
+    color: #999;
+}
+
+.short_description{
+    margin-top: 1em;
+    font-size: 12px;
+    color: #efefef;
+}

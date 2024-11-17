@@ -1,0 +1,14 @@
+.gamelist_container{
+    padding: 1em;
+    width: 100vw;
+    overflow: scroll;
+}
+
+.gamelist_container .list{
+    display: flex;
+    gap: 1em;
+}
+
+.list-item{
+    list-style-type: none;
+}
