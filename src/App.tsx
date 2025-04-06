@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
 import GamesList from './Components/GameList/Index';
 import GameSection from './Components/GameSection';
 
