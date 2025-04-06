@@ -1,13 +1,19 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import GamesList from './Components/GameList/Index';
+import GameSection from './Components/GameSection';
+
+import './App.css';
 
 const App = () => {
-  useEffect(() => {
-    
-  }, []);
+  const [gameId, setGameId] = useState<number>(1);
+
+  const handleGameCardClick = (id: number) => {
+    setGameId(id);
+  }
   return (
     <div className="app_container">
-      <GamesList/>
+      <GameSection gameId={gameId}/>
+      <GamesList onClick={handleGameCardClick}/>
     </div>
   )
 }

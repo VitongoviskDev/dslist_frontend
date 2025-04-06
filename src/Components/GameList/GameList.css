@@ -1,12 +1,30 @@
 .gamelist_container{
     padding: 1em;
     width: 100vw;
-    overflow: scroll;
 }
 
 .gamelist_container .list{
-    display: flex;
-    gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, auto);
+    grid-auto-flow: column; 
+    gap: .5em; 
+    overflow-x: scroll; 
+
+    padding-bottom: .4em;
+    width: 100%;
+}
+
+.gamelist_container .list::-webkit-scrollbar {
+    height: 8px;
+}
+.gamelist_container .list::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    border-radius: 4px;
+    background: linear-gradient(to right, #ff00ff, #0077ff);
+}
+.gamelist_container .list::-webkit-scrollbar-thumb:hover,
+.gamelist_container .list::-webkit-scrollbar-thumb:active {
+    border-radius: 4px;
 }
 
 .list-item{

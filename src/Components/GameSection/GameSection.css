@@ -1,0 +1,51 @@
+.game_section{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 70vh;
+    padding: 1em;
+
+    background-color: #222222;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+
+    width: clamp(600px, 80vw, 1280px);
+
+    height: 60%;
+}
+
+.image_container{
+    height: 100%;
+}
+.image_container img{
+    height: 100%;
+    border-radius: 1em;
+}
+
+.text_container{
+    height: 100%;
+    margin-left: 2em;
+}
+.game_title{
+    font-size: 2em;
+    color: #fefefe;
+}
+.game_year{
+    font-size: 1em;
+    color: #aaa;
+}
+.full_description{
+    font-size: 1em;
+    color: #fff;
+
+    margin-top: 2em;
+}
+
+.image_container{
+    margin-bottom: -.83%;
+}

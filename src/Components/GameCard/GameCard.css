@@ -1,20 +1,31 @@
 .gamecard_container{
-    width: 15vw;
+    position: relative;
+    width: 172px;
 
-    border-radius: 1em;
+    border-radius: .8em;
     overflow: hidden;
+
+    transition: all ease-in-out 2s;
+}
+.gamecard_container > *{
+    cursor: pointer;
 }
 .image{
     width: 100%;
-    margin-bottom: -.25em;
+    margin-bottom: -.5em;
 }
 .image img{
     width: 100%;
 }
 
-.text_content{
-    padding: 1em;
-    background-color: #222;
+.text_content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    padding: 1em .5em;
+    padding-top: .2em;
+    background-color: #222222cf;
 }
 
 .title{
@@ -30,7 +41,7 @@
 }
 
 .short_description{
-    margin-top: 1em;
+    margin-top: .5em;
     font-size: 12px;
     color: #efefef;
 }

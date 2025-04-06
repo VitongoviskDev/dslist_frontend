@@ -4,8 +4,13 @@ import { GameMinDTO } from '../../types/GameMinDTO'; // Certifique-se de ajustar
 import GameCard from '../GameCard';
 
 import './GameList.css'
+import api from '../../axiosConfig';
 
-const GamesList: React.FC = () => {
+interface GamesListProps {
+  onClick: (id: number) => void;
+}
+
+const GamesList = (props: GamesListProps) => {
   const [games, setGames] = useState<GameMinDTO[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -13,7 +18,7 @@ const GamesList: React.FC = () => {
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const response = await axios.get<GameMinDTO[]>('http://localhost:8080/games');
+        const response = await api.get<GameMinDTO[]>('/games');
         setGames(response.data); // Os dados agora têm tipagem!
       } catch (err) {
         setError('Erro ao carregar jogos');
@@ -33,7 +38,7 @@ const GamesList: React.FC = () => {
       <ul className='list'>
         {games.map((game) => (
           <li key={game.id} className='list-item'>
-            <GameCard game={game}/>
+            <GameCard game={game} onClick={props.onClick}/>
           </li>
         ))}
       </ul>

@@ -1,9 +1,13 @@
-private Long id;
-    private String title;
-    private Integer year;
-    private String genre;
-    private String platforms;
-    private Double score;
-    private String imgUrl;
-    private String shortDescription;
-    private String longDescription;
+interface GameDTO{
+    id: bigint,
+    title: string,
+    year: number,
+    genre: string,
+    platforms: string,
+    score: Number,
+    imgUrl: string,
+    shortDescription: string,
+    longDescription: string
+} 
+
+export default GameDTO;
